@@ -8,5 +8,5 @@ let t,e;function o(t){return t&&t.__esModule?t.default:t}"use strict";var i,n,a,
           <p class="info-item"><b>Downloads:</b> ${t.downloads}</p>
         </div>
       </a>
-    `);eF.insertAdjacentHTML("beforeend",e.join(""))}(n)}catch(t){o(eW).Notify.failure(`Failed to fetch images: ${t}`)}}function eY(){eH(e,t+=1)}document.querySelector(".loader"),eX.addEventListener("submit",eU),ej.addEventListener("click",eY),window.addEventListener("scroll",function(){window.innerHeight+window.scrollY>=document.body.offsetHeight&&eY()}),ej.style.display="none",document.addEventListener("DOMContentLoaded",()=>{new SimpleLightbox(".gallery a",{captions:!0,captionsData:"alt",captionDelay:250})});
-//# sourceMappingURL=index.2bd4efd8.js.map
+    `);eF.insertAdjacentHTML("beforeend",e.join(""))}(n)}catch(t){o(eW).Notify.failure(`Failed to fetch images: ${t}`)}}document.querySelector(".loader"),eX.addEventListener("submit",eU),window.addEventListener("scroll",function(){window.innerHeight+window.scrollY>=document.body.offsetHeight&&eH(e,t+=1)}),ej.style.display="none",document.addEventListener("DOMContentLoaded",()=>{new SimpleLightbox(".gallery a",{captions:!0,captionsData:"alt",captionDelay:250})});
+//# sourceMappingURL=index.1b4d4328.js.map
