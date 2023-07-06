@@ -11,7 +11,6 @@ const apiKey = "38015405-7546e421a34b4b2277fcb8cdc";
 const loader = document.querySelector(".loader");
 
 formInput.addEventListener("submit", handleSubmitForm);
-loadMoreBtn.addEventListener("click", loadImages);
 window.addEventListener("scroll", handleScroll);
 // знаходжу значення інпуту
 // чищу галерею
