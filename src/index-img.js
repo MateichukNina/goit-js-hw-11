@@ -1,8 +1,8 @@
 import "simplelightbox/dist/simple-lightbox.min.css";
-
+import {loadImages, handleScroll} from "./index.js"
 import axios from "axios";
 import Notiflix from "notiflix";
-import 'simplelightbox/dist/simple-lightbox.min.js';
+import "simplelightbox/dist/simple-lightbox.min.js";
 
 const formInput = document.querySelector(".search-form");
 const gallery = document.querySelector(".gallery");
@@ -15,7 +15,7 @@ window.addEventListener("scroll", handleScroll);
 // знаходжу значення інпуту
 // чищу галерею
 // запускаю запит на api
-loadMoreBtn.style.display = "none";
+// loadMoreBtn.style.display = "none";
 
 let currentPage;
 let query;
@@ -62,17 +62,9 @@ async function searchImages(query, page) {
     Notiflix.Notify.failure(`Failed to fetch images: ${error}`);
   }}
 
-  function handleScroll() {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-      loadImages();
-    }
-  }
-
-function loadImages() {
   
-    currentPage += 1;
-    searchImages(query, currentPage);
-  }
+
+
 
 
 // перебираю масив
@@ -80,34 +72,10 @@ function loadImages() {
 
 
 function displayImages(images) {
-  // images.forEach(image => {
-  //   const card = document.createElement("div");
-  //   card.classList.add("photo-cards");
-
-  //   const img = document.createElement("img");
-  //   img.src = image.webformatURL;
-  //   img.alt = image.tags;
-  //   img.loading = "lazy";
-
-  //   const link = document.createElement("a");
-
-  //   const info = document.createElement("div");
-  //   info.classList.add("info");
-
-  //   const likes = createInfoItem("Likes", image.likes);
-  //   const views = createInfoItem("Views", image.views);
-  //   const comments = createInfoItem("Comments", image.comments);
-  //   const downloads = createInfoItem("Downloads", image.downloads);
-
-  //   info.append(likes, views, comments, downloads);
-  //   card.append(img, info);
-  //   link.append(card);
-  //   gallery.appendChild(link);
-  // });
 
   const cardsMarkup = images.map(image => {
     return `
-      <a href="${image.largeImageURL}" class="photo-card">
+      <a href="${image.largeImageURL}" target="blank" class="photo-card">
         <img src="${image.webformatURL}" alt="${image.tags}" loading="lazy" />
         <div class="info">
           <p class="info-item"><b>Likes:</b> ${image.likes}</p>

@@ -1,5 +1,6 @@
 body {
   width: 100%;
+  overflow-x: hidden;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
@@ -10,6 +11,7 @@ body {
 
 .container{
   margin-top: 20px;
+  overflow-x: hidden;
 }
 
 .search-form {
